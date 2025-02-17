@@ -1,50 +1,102 @@
-# React + TypeScript + Vite
+# React Phone Input Custom
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React component for inputting and validating phone numbers with international support, featuring an easy-to-use country code selection.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```sh
+npm install react-phone-input-custom
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+or with yarn:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+yarn add react-phone-input-custom
 ```
+
+## Peer Dependencies
+
+This library requires the following peer dependencies:
+
+- `react` (>=19.0.0)
+- `react-dom` (>=19.0.0)
+
+Ensure these are installed in your project:
+
+```sh
+npm install react react-dom
+```
+
+## Dependencies
+
+The package depends on the following libraries:
+
+- `google-libphonenumber` (Phone number parsing and validation)
+- `libphonenumber-js` (Formatting and validation support)
+- `axios` (Fetching country data)
+
+## Usage
+
+```tsx
+import PhoneInput from 'react-phone-input-custom';
+
+function App() {
+    return (
+        <PhoneInput 
+            initialCountryCode="IN" 
+            enableRedBorderOnError={false} 
+            maxPhoneLength={15} 
+            fetchAllCountries={false}
+        />
+    );
+}
+
+export default App;
+```
+
+## Customization
+
+The component supports various customization options:
+
+### Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `fetchAllCountries` | `boolean` | `false` | Fetches all available countries if `true` |
+| `initialCountryCode` | `string` | `'IN'` | Default country code |
+| `enableRedBorderOnError` | `boolean` | `true` | Highlights border red on invalid input |
+| `maxPhoneLength` | `number` | `15` | Maximum length of phone number |
+| `isPhoneNumberValid` | `(isValid: boolean) => void` | `undefined` | Callback for validation state |
+| `containerStyle` | `CSSProperties` | `{}` | Custom styles for container |
+| `inputStyle` | `CSSProperties` | `{}` | Custom styles for input field |
+| `dropdownStyle` | `CSSProperties` | `{}` | Custom styles for dropdown |
+| `inputRef` | `Ref<HTMLInputElement>` | `undefined` | Ref for the input field |
+| `onPhoneChange` | `(data: PhoneData) => void` | `undefined` | Callback triggered on input change |
+
+### Phone Data Object
+
+The `onPhoneChange` callback receives an object with the following structure:
+
+```ts
+{
+    dialCode: string;
+    countryCode: string;
+    nationalFormattedNumber: string;
+    internationalFormattedNumber: string;
+    e164Number: string;
+    mobileNumber: string;
+}
+```
+
+## API Details
+
+The component internally fetches country data using `axios` and leverages `google-libphonenumber` and `libphonenumber-js` for parsing and validation.
+
+## License
+
+MIT © Anurag Singh
+
+## Contributing
+
+Contributions are welcome! Feel free to submit issues and pull requests to the [GitHub repository](https://github.com/Anurockk/react-phone-input-custom).
+
