@@ -33,7 +33,6 @@ The package depends on the following libraries:
 
 - `google-libphonenumber` (Phone number parsing and validation)
 - `libphonenumber-js` (Formatting and validation support)
-- `axios` (Fetching country data)
 
 ## Usage
 
@@ -60,18 +59,18 @@ The component supports various customization options:
 
 ### Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `fetchAllCountries` | `boolean` | `false` | Fetches all available countries if `true` |
-| `initialCountryCode` | `string` | `'IN'` | Default country code |
-| `enableRedBorderOnError` | `boolean` | `true` | Highlights border red on invalid input |
-| `maxPhoneLength` | `number` | `15` | Maximum length of phone number |
-| `isPhoneNumberValid` | `(isValid: boolean) => void` | `undefined` | Callback for validation state |
-| `containerStyle` | `CSSProperties` | `{}` | Custom styles for container |
-| `inputStyle` | `CSSProperties` | `{}` | Custom styles for input field |
-| `dropdownStyle` | `CSSProperties` | `{}` | Custom styles for dropdown |
-| `inputRef` | `Ref<HTMLInputElement>` | `undefined` | Ref for the input field |
-| `onPhoneChange` | `(data: PhoneData) => void` | `undefined` | Callback triggered on input change |
+| Prop                     | Type                         | Default     | Description                               |
+|--------------------------|------------------------------|-------------|-------------------------------------------|
+| `fetchAllCountries`      | `boolean`                    | `false`     | Fetches all available countries if `true` |
+| `initialCountryCode`     | `string`                     | `'IN'`      | Default country code                      |
+| `enableRedBorderOnError` | `boolean`                    | `true`      | Highlights border red on invalid input    |
+| `maxPhoneLength`         | `number`                     | `15`        | Maximum length of phone number            |
+| `isPhoneNumberValid`     | `(isValid: boolean) => void` | `undefined` | Callback for validation state             |
+| `containerStyle`         | `CSSProperties`              | `{}`        | Custom styles for container               |
+| `inputStyle`             | `CSSProperties`              | `{}`        | Custom styles for input field             |
+| `dropdownStyle`          | `CSSProperties`              | `{}`        | Custom styles for dropdown                |
+| `inputRef`               | `Ref<HTMLInputElement>`      | `undefined` | Ref for the input field                   |
+| `onPhoneChange`          | `(data: PhoneData) => void`  | `undefined` | Callback triggered on input change        |
 
 ### Phone Data Object
 
