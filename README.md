@@ -90,7 +90,7 @@ The `onPhoneChange` callback receives an object with the following structure:
 
 ## API Details
 
-The component internally fetches country data using `axios` and leverages `google-libphonenumber` and `libphonenumber-js` for parsing and validation.
+The component internally fetches country data using `fetch` and leverages `google-libphonenumber` and `libphonenumber-js` for parsing and validation.
 
 ## License
 
