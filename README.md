@@ -33,6 +33,7 @@ The package depends on the following libraries:
 
 - `google-libphonenumber` (Phone number parsing and validation)
 - `libphonenumber-js` (Formatting and validation support)
+- `tailwind` (For css and styles)
 
 ## Usage
 
