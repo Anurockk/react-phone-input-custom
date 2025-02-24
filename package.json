@@ -1,6 +1,6 @@
 {
   "name": "react-phone-input-custom",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A React component for inputting and validating phone numbers with international support, featuring an easy-to-use country code selection.",
   "author": "Anurag Singh",
   "license": "MIT",
