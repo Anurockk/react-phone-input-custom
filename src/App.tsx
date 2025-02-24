@@ -1,5 +1,5 @@
 import './App.css';
-import PhoneInput from './components/phoneInput/PhoneInput';
+import {PhoneInput} from "./Index";
 
 function App() {
     return (
