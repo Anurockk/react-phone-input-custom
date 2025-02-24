@@ -3,13 +3,14 @@
     "outDir": "dist",
     "module": "ESNext",
     "target": "ES5",
-    "declaration": true,      // ✅ Generates .d.ts files
-    "emitDeclarationOnly": true, // ✅ Only generates type declarations
+    "declaration": true,
+    "emitDeclarationOnly": true,
     "jsx": "react-jsx",
     "esModuleInterop": true,
     "moduleResolution": "Node",
     "strict": true,
-    "skipLibCheck": false
+    "skipLibCheck": false,
+    "typeRoots": ["./node_modules/@types", "./src/types"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
