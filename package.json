@@ -11,6 +11,23 @@
   "files": [
     "dist"
   ],
+  "keywords": [
+    "react",
+    "phone input",
+    "react-phone-input",
+    "phone number",
+    "international phone input",
+    "react phone number input",
+    "libphonenumber",
+    "phone validation",
+    "react component",
+    "phone input with country code",
+    "react-phone-input-2 alternative",
+    "phone number validation",
+    "react library",
+    "input mask",
+    "react-phone-input-custom"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
