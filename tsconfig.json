@@ -3,13 +3,13 @@
     "outDir": "dist",
     "module": "ESNext",
     "target": "ES5",
-    "declaration": true,
+    "declaration": true,      // ✅ Generates .d.ts files
+    "emitDeclarationOnly": true, // ✅ Only generates type declarations
     "jsx": "react-jsx",
     "esModuleInterop": true,
     "moduleResolution": "Node",
     "strict": true,
-    "skipLibCheck": false,
-    "composite": true
+    "skipLibCheck": false
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]

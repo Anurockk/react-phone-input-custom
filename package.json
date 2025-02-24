@@ -5,8 +5,8 @@
   "author": "Anurag Singh",
   "license": "MIT",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
@@ -39,7 +39,8 @@
     "google-libphonenumber": "^3.2.40",
     "libphonenumber-js": "^1.11.20",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-phone-input-custom": "^1.0.2"
   },
   "peerDependencies": {
     "react": "^19.0.0",
