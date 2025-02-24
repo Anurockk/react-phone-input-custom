@@ -20,7 +20,7 @@ declare module 'react-phone-input-custom' {
             mobileNumber: string;
         }) => void;
     }
-
     const PhoneInput: ComponentType<PhoneInputProps>;
     export default PhoneInput;
+    export { PhoneInput };
 }
